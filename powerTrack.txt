@@ -1,0 +1,153 @@
+?? Documento de Diseño del Sistema
+PowerTrack – Monitoreo Inteligente de Consumo Energético en Aulas
+
+1. ?? Descripción General del Proyecto
+PowerTrack es una solución tecnológica orientada a instituciones educativas que permite monitorear, analizar y optimizar el consumo energético en aulas.
+El sistema se apoya en un dispositivo simulado (sensor energético) que registra el consumo eléctrico y envía datos a una aplicación web, donde se procesan para detectar anomalías y generar alertas.
+
+2. ?? Objetivo del Proyecto
+Desarrollar una aplicación que:
+* Monitoree el consumo energético por aula
+* Detecte consumos anormales o fuera de horario
+* Calcule la eficiencia energética
+* Genere alertas automáticas
+* Permita visualizar métricas en tiempo real
+
+3. ?? Alcance del Sistema
+El sistema incluirá:
+* Registro de aulas
+* Simulación de datos energéticos
+* Cálculo de métricas (consumo y eficiencia)
+* Visualización en dashboard
+* Generación de alertas
+
+
+5. ?? Arquitectura del Sistema
+Módulos principales:
+1. Gestión de Aulas
+2. Simulador de Consumo
+3. Motor de Análisis
+4. Sistema de Alertas
+5. Dashboard de Visualización
+
+6. ?? Modelo Funcional
+Variables principales:
+* Energía total consumida (E_total)
+* Energía útil (E_útil)
+* Eficiencia energética (?)
+* Horario del aula
+Fórmula aplicada:
+[
+\eta = \frac{E_{útil}}{E_{total}} \times 100
+]
+
+7. ?? Requerimientos del Sistema
+7.1 Requerimientos Funcionales
+* RF01: Registrar aulas con sus datos (nombre, horario, consumo esperado)
+* RF02: Simular consumo energético por aula
+* RF03: Calcular eficiencia energética automáticamente
+* RF04: Detectar consumo fuera de horario
+* RF05: Generar alertas por consumo anormal
+* RF06: Mostrar métricas en un dashboard
+* RF07: Visualizar historial de consumo
+* RF08: Clasificar estado del aula (Normal, Advertencia, Crítico)
+
+7.2 Requerimientos No Funcionales
+* RNF01: Interfaz amigable e intuitiva
+* RNF02: Respuesta en tiempo real (simulada)
+* RNF03: Código modular y escalable
+* RNF04: Compatible con navegadores modernos
+* RNF05: Bajo consumo de recursos
+
+8. ?? Actores del Sistema
+* Administrador: gestiona aulas y monitorea datos
+* Sistema (Szimulador): genera datos y analiza información
+
+9. ?? Casos de Uso
+
+CU01 – Registrar Aula
+Actor: Administrador
+Descripción: Permite registrar una nueva aula en el sistema
+Flujo:
+1. El usuario ingresa datos del aula
+2. El sistema valida la información
+3. Se guarda el aula
+
+CU02 – Simular Consumo Energético
+Actor: Sistema
+Descripción: Genera datos de consumo durante una jornada
+Flujo:
+1. Se inicia simulación
+2. Se generan valores de consumo
+3. Se almacenan temporalmente
+
+CU03 – Calcular Eficiencia Energética
+Actor: Sistema
+Descripción: Calcula la eficiencia con base en los datos
+Flujo:
+1. Se obtienen valores de energía
+2. Se aplica la fórmula
+3. Se genera resultado
+
+CU04 – Detectar Anomalías
+Actor: Sistema
+Descripción: Identifica comportamientos anormales
+Condiciones:
+* Consumo fuera de horario
+* Consumo superior al promedio
+* Baja eficiencia
+
+CU05 – Generar Alertas
+Actor: Sistema
+Descripción: Notifica problemas detectados
+Flujo:
+1. Se detecta anomalía
+2. Se clasifica alerta
+3. Se muestra en dashboard
+
+CU06 – Visualizar Dashboard
+Actor: Administrador
+Descripción: Permite visualizar métricas y estado del sistema
+Incluye:
+* Gráficas
+* Estado por aula
+* Alertas activas
+
+10. ?? Diseño del Dashboard
+El dashboard incluirá:
+* Tarjetas de métricas:
+o Consumo total
+o Eficiencia promedio
+o Alertas activas
+* Tabla de aulas:
+o Nombre
+o Consumo
+o Eficiencia
+o Estado
+* Gráficas:
+o Consumo vs tiempo
+
+11. ?? Lógica de Alertas
+Se generarán alertas si:
+* Consumo > 120% del promedio
+* Eficiencia < 70%
+* Consumo fuera de horario
+
+12. ?? Propuesta de Valor
+PowerTrack permite:
+* Reducir costos energéticos
+* Detectar desperdicio de energía
+* Mejorar la eficiencia operativa
+* Promover sostenibilidad ambiental
+
+13. ?? Futuras Mejoras
+* Integración con sensores reales
+* Notificaciones móviles
+* Inteligencia artificial predictiva
+* Base de datos persistente
+
+14. ? Conclusión
+PowerTrack es una solución innovadora que combina principios de la física con el desarrollo de software para resolver un problema real: el desperdicio energético en aulas.
+Su implementación permite a las instituciones tomar decisiones informadas, optimizar recursos y contribuir al cuidado del medio ambiente.
+
+
